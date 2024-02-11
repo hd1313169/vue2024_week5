@@ -155,7 +155,6 @@ const app = Vue.createApp({
 
         onSubmit() {
             const order = this.form
-            console.log(order)
             axios.post(`${apiUrl}/api/${apiPath}/order`, { data: order })
                 .then(res => {
                     //提示訊息
@@ -163,10 +162,13 @@ const app = Vue.createApp({
 
                     //清空表單
                     this.$refs.form.resetForm();
-                    this.form.message = '' ;
+                    this.form.message = '';
 
                     //更新購物車
                     this.getCart();
+
+                    //跳轉
+                    window.location = 'index.html'
                 })
                 .catch((err) => {
                     alert(err.response.data.message);

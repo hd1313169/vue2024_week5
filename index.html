@@ -22,6 +22,7 @@
                     :add-to-cart="addToCart" :status="status"></product-modal>
                 <!-- 產品Modal -->
 
+                <!-- 產品列表 -->
                 <table class="table align-middle">
                     <thead>
                         <tr>
@@ -65,14 +66,17 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- 產品列表 -->
 
+                <!-- 清空購物車按鈕 -->
                 <div class="text-end">
                     <button @click="removeAllItem()" class="btn btn-outline-danger" type="button">
                         清空購物車
                     </button>
                 </div>
-                <!-- 購物車列表 -->
+                <!-- 清空購物車按鈕 -->
 
+                <!-- 購物車列表 -->
                 <table class="table align-middle">
                     <thead>
                         <tr>
@@ -129,6 +133,7 @@
                         </tr> -->
                     </tfoot>
                 </table>
+                <!-- 購物車列表 -->
             </div>
 
             <!-- 表單 -->
@@ -172,7 +177,8 @@
                     <!-- 留言 -->
                     <div class="mb-3">
                         <label for="message" class="form-label">留言</label>
-                        <textarea v-model="form.message" id="message" class="form-control" cols="30" rows="10"></textarea>
+                        <textarea v-model="form.message" id="message" class="form-control" cols="30"
+                            rows="10"></textarea>
                     </div>
 
                     <!-- 送出 -->
